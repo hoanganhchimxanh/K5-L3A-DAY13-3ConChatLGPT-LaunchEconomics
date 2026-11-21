@@ -5,7 +5,7 @@
 - Tên nhóm: 3ConChatLGPT
 - Lớp: L3A
 - Repo nhóm: `K5-L3A-DAY13-3ConChatLGPT-LaunchEconomics`
-- URL repo, nhánh nộp, commit chốt:
+- URL repo, nhánh nộp, commit chốt: https://github.com/hoanganhchimxanh/K5-L3A-DAY13-3ConChatLGPT-LaunchEconomics (nhánh `main`)
 
 ## Thành viên
 
@@ -67,15 +67,15 @@ Ví dụ: `report/team/2A202603385_NguyenHoangAnh.md`.
 - **CP2 (B):** Tiếp tục cập nhật `bang_chi_phi.md` với bảng B1 (9 kịch bản), câu trả lời B3 và B4.
 - **CP3 (C):** Tổng hợp hai bộ nhãn độc lập (Hoàng Anh và Hiếu) vào `report/team/bang_loi.md`; tính tỉ lệ đồng thuận; điền bảng khắc phục 5 ca đủ năm loại Google PAIR.
 - **CP4 (D):** Điền toàn bộ dấu `?` trong `report/team/pilot_plan.yaml`; đảm bảo ít nhất 3 luật dừng đúng mẫu NẾU–TRONG–THÌ–KHÔNG THÌ.
-- **CP5 (E):** Chủ trì ghép `report/team/chi_so.md`; hoàn thiện `ho_so_launch_v0.md` (đủ 7 mục, dòng cuối là đề xuất); điều phối `group_report.md`, commit và push.
+- **CP5 (E):** Chủ trì ghép `report/team/chi_so.md`; hoàn thiện `ho_so_launch_v0.md` (đủ 7 mục, dòng cuối là đề xuất); tổng hợp `group_report.md`, điều phối đóng gói hồ sơ Gate 2a.
 
 ### Đóng góp cụ thể
 
 - Điền `bang_chi_phi.md` đầy đủ từ CP1–CP2: A2 (CPS 4.472 đ [simulated], gấp 16,3× hóa đơn token), A3 (4 loại YC), A4 (chi phí cố định 0,38× ở quy mô đầy đủ), B1 (9 kịch bản độ nhạy), B3 (giới hạn 2 lần rẻ nhất cho cả công ty: 6.901.220 đ [simulated]), B4 (xem lại 100% → CPS 11.743–12.415 đ [simulated]).
 - Ghi mục 1, 2, 3 vào `ho_so_launch_v0.md` ngay sau CP1 với nhãn `simulated` đúng quy tắc.
-- Tổng hợp `bang_loi.md`: hai bộ nhãn độc lập, tỉ lệ đồng thuận, quy tắc cho ca không trùng, bảng khắc phục 5 ca (mỗi ca có cách phát hiện đo được và một vai trò phụ trách).
+- Tổng hợp `bang_loi.md`: hai bộ nhãn độc lập, tỉ lệ đồng thuận 20/20 (100%), quy tắc cho ca không trùng, bảng khắc phục 5 ca (mỗi ca có cách phát hiện đo được và một vai trò phụ trách).
 - Điền `pilot_plan.yaml` không còn dấu `?`; chọn phân bổ theo nhân viên (20 + 20), chấp nhận mức chênh MDE=0,06 (n_hiệu dụng=859, m ≥ 299 YC/người, DE=6,96); viết 3 luật dừng đủ 4 vế NẾU–TRONG–THÌ–KHÔNG THÌ; căn cứ theo tỉ lệ mở lại thực tế 3,97% của phạm vi `noi_dia` + `hang_nang`.
-- Hoàn thiện `chi_so.md` và `ho_so_launch_v0.md` cho CP5; gửi hồ sơ cho nhóm hội đồng đúng 17:00.
+- Hoàn thiện `chi_so.md` (5 chỉ số, 10 event có trace_id, 3 rủi ro kinh tế) và hoàn thiện `ho_so_launch_v0.md` (đủ 7 mục, đề xuất Go có điều kiện kèm 4 điều kiện); viết báo cáo nhóm `group_report.md`.
 
 ### Bằng chứng
 
@@ -84,6 +84,7 @@ Ví dụ: `report/team/2A202603385_NguyenHoangAnh.md`.
 - [`report/team/bang_loi.md`](report/team/bang_loi.md) — tổng hợp nhãn và bảng khắc phục.
 - [`report/team/pilot_plan.yaml`](report/team/pilot_plan.yaml) — không còn dấu `?`.
 - [`report/team/chi_so.md`](report/team/chi_so.md) — chỉ số, event, rủi ro kinh tế.
+- [`report/team/group_report.md`](report/team/group_report.md) — báo cáo nhóm.
 - [`report/team/2A202603397_VoHuyHoang.md`](report/team/2A202603397_VoHuyHoang.md) — báo cáo cá nhân.
 
 ## NguyenTuanHieu-2A202603374
