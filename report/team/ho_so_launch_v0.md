@@ -11,7 +11,7 @@ Nhóm: 3ConChatLGPT · Lớp: K5-L3A
 | 3 · So với nhân viên tự làm | Chi phí cả hệ thống: 5.865 đ/YC = 0,49× baseline 12.000 đ; trong phạm vi noi_dia + hang_nang: 4.599 đ = 0,38× [simulated] | Giả lập | Người giữ hồ sơ (Hoàng) |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | Đợt chạy thử: Chính = 82,83% (đóng 24h, không mở lại 7 ngày); Dùng = 27,12% bỏ qua gợi ý; An toàn = 4,25% lỗi lọt đến khách (mở lại 7 ngày) | Xong, có bằng chứng | Người giữ hồ sơ (Hoàng) |
 | 5 · Bảng lỗi và cách khắc phục | Tỉ lệ đồng thuận 20/20 (100%); 5 nhóm lỗi PAIR; bảng khắc phục 5 ca (mỗi loại 1 ca) có event đo được gắn trace_id và ngưỡng cụ thể | Xong, có bằng chứng | Trưởng nhóm CSKH |
-| 6 · Pilot plan | Phân bổ ngẫu nhiên theo nhân viên (20 + 20); MDE = 0,06 (power 0,80), cần m ≥ 299 YC/người (DE = 6,96); 3 luật dừng 4 vế NẾU–TRONG–THÌ–KHÔNG THÌ; rollback 30 phút | Xong, có bằng chứng | Giám đốc vận hành LogiX-VN |
+| 6 · Pilot plan | Phân bổ ngẫu nhiên theo nhân viên (20 + 20); MDE = 0,06 (power 0,80), cần m ≥ 299 YC/người (DE = 6,96); 3 luật dừng 4 vế NẾU–TRONG–THÌ–KHÔNG THÌ; rollback 30 phút; mở lại trong 7 ngày 3,97% (39/982, simulated) cho phạm vi pilot | Xong, có bằng chứng | Giám đốc vận hành LogiX-VN |
 | 7 · Rủi ro kinh tế | Làm lại gấp đôi: CPS tăng +51,77% (lên 6.787 đ); Xem lại 100%: CPS lên 11.743–12.415 đ (0,98×–1,03× baseline); Khối lượng giảm 50%: CPS lên 5.784 đ [simulated] | Giả lập | PM trợ lý hoàn phí |
 
 **Đề xuất:** **Go có điều kiện** cho kế hoạch pilot trợ lý hoàn phí trong phạm vi `noi_dia` + `hang_nang`.
