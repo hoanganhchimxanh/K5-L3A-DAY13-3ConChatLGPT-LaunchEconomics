@@ -17,3 +17,4 @@ Nhóm: 3ConChatLGPT · Lớp: K5-L3A
 **Đề xuất:** *(Điền sau CP5)* Go có điều kiện cho pilot noi_dia + hang_nang — điều kiện và người phụ trách sẽ xác định sau khi hoàn thành D và E.
 
 - Ghi chú CP1 (14:10–14:53): Mục 1–3 đã có số từ `src/lab13.py`; ba phép thử A1 đạt (1,20 · 1,25 · 1,25); số liệu A2–A4 đúng trong sai số 2% so với đáp án mẫu.
+- Ghi chú CP2 (14:53–15:20): Mục 2 cập nhật xếp hạng 3 yếu tố từ bảng độ nhạy B1 (9 kịch bản). Kết luận bổ sung: giới hạn 2 lần chạy tối ưu chi phí cả hệ thống (6.901.220 đ [simulated]); xem lại 100% triệt tiêu lợi thế so với 12.000 đ baseline (B4: 11.743–12.415 đ [simulated]). `bang_chi_phi.md` đầy đủ A1–B4.
