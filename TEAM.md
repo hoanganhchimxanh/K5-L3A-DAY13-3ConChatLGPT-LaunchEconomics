@@ -12,7 +12,7 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Hoàng Anh | 2A202603385 | hoanganh@example.com | [hoanganhchimxanh](https://github.com/hoanganhchimxanh) | Thành viên 1 — Viết code CP1–CP2 (nhiệm vụ A, B); Người gắn nhãn 1 ở CP3 |
-|   2 | Võ Huy Hoàng | 2A202603397 | hoang@example.com | [ferr2764](https://github.com/ferr2764) | Thành viên 3 — Người giữ hồ sơ và điều phối báo cáo |
+|   2 | Võ Huy Hoàng | 2A202603397 | vhhoang27062@gmail.com | [ferr2764](https://github.com/ferr2764) | Thành viên 3 — Người giữ hồ sơ và điều phối báo cáo |
 |   3 | Nguyễn Tuấn Hiếu | 2A202603374 | hieu@example.com | [tuanhieu1162004](https://github.com/tuanhieu1162004) | Thành viên 2 — Kiểm số A/B; Viết code CP4 (D1); Người gắn nhãn 2 ở CP3 |
 
 Bốn vai của lab (phân bổ cho nhóm 3 người):
@@ -74,7 +74,7 @@ Ví dụ: `report/team/2A202603385_NguyenHoangAnh.md`.
 - Điền `bang_chi_phi.md` đầy đủ từ CP1–CP2: A2 (CPS 4.472 đ [simulated], gấp 16,3× hóa đơn token), A3 (4 loại YC), A4 (chi phí cố định 0,38× ở quy mô đầy đủ), B1 (9 kịch bản độ nhạy), B3 (giới hạn 2 lần rẻ nhất cho cả công ty: 6.901.220 đ [simulated]), B4 (xem lại 100% → CPS 11.743–12.415 đ [simulated]).
 - Ghi mục 1, 2, 3 vào `ho_so_launch_v0.md` ngay sau CP1 với nhãn `simulated` đúng quy tắc.
 - Tổng hợp `bang_loi.md`: hai bộ nhãn độc lập, tỉ lệ đồng thuận, quy tắc cho ca không trùng, bảng khắc phục 5 ca (mỗi ca có cách phát hiện đo được và một vai trò phụ trách).
-- Điền `pilot_plan.yaml` không còn dấu `?`; viết luật dừng đủ 4 vế dựa trên tỉ lệ mở lại thực tế (4,25%).
+- Điền `pilot_plan.yaml` không còn dấu `?`; chọn phân bổ theo nhân viên (20 + 20), chấp nhận mức chênh MDE=0,06 (n_hiệu dụng=859, m ≥ 299 YC/người, DE=6,96); viết 3 luật dừng đủ 4 vế NẾU–TRONG–THÌ–KHÔNG THÌ; căn cứ theo tỉ lệ mở lại thực tế 3,97% của phạm vi `noi_dia` + `hang_nang`.
 - Hoàn thiện `chi_so.md` và `ho_so_launch_v0.md` cho CP5; gửi hồ sơ cho nhóm hội đồng đúng 17:00.
 
 ### Bằng chứng

@@ -11,10 +11,12 @@ Nhóm: 3ConChatLGPT · Lớp: K5-L3A
 | 3 · So với nhân viên tự làm | Chi phí cả hệ thống: 5.865 đ/YC = 0,49× của 12.000 đ; trong phạm vi noi_dia + hang_nang: 4.599 đ = 0,38× [simulated] | Giả lập | Người giữ hồ sơ (Hoàng) |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | Chưa tính (cần CP5 — nhiệm vụ E) | Chưa | Người giữ hồ sơ (Hoàng) |
 | 5 · Bảng lỗi và cách khắc phục | Đồng thuận 20/20 (100%); 5 loại PAIR; bảng khắc phục 5 ca có event trace_id và ngưỡng đo được | Xong, có bằng chứng | Người giữ hồ sơ (Hoàng) |
-| 6 · Pilot plan | Chưa tính cỡ mẫu (cần CP4 — nhiệm vụ D) | Chưa | Người kiểm số (Hiếu) |
+| 6 · Pilot plan | Chia theo nhân viên (20 + 20), MDE=0,06 (power 0,80), cần m ≥ 299 YC/người, 3 luật dừng 4 vế, rollback 30 phút | Xong, có bằng chứng | Người giữ hồ sơ (Hoàng) |
 | 7 · Rủi ro kinh tế | Chưa tổng hợp (cần CP5 — nhiệm vụ E; số từ bảng độ nhạy B1 đã có) | Chưa | Người giữ hồ sơ (Hoàng) |
 
 **Đề xuất:** *(Điền sau CP5)* Go có điều kiện cho pilot noi_dia + hang_nang — điều kiện và người phụ trách sẽ xác định sau khi hoàn thành D và E.
 
 - Ghi chú CP1 (14:10–14:53): Mục 1–3 đã có số từ `src/lab13.py`; ba phép thử A1 đạt (1,20 · 1,25 · 1,25); số liệu A2–A4 đúng trong sai số 2% so với đáp án mẫu.
 - Ghi chú CP2 (14:53–15:20): Mục 2 cập nhật xếp hạng 3 yếu tố từ bảng độ nhạy B1 (9 kịch bản). Kết luận bổ sung: giới hạn 2 lần chạy tối ưu chi phí cả hệ thống (6.901.220 đ [simulated]); xem lại 100% triệt tiêu lợi thế so với 12.000 đ baseline (B4: 11.743–12.415 đ [simulated]). `bang_chi_phi.md` đầy đủ A1–B4.
+- Ghi chú CP3 (15:35–16:08): Mục 5 hoàn thiện với tỉ lệ đồng thuận 20/20 (100%); bảng khắc phục 5 ca đủ 5 nhóm PAIR, có event đo được gắn trace_id.
+- Ghi chú CP4 (16:08–16:36): Mục 6 hoàn thành `pilot_plan.yaml`. Chọn chia theo nhân viên (20 + 20), chấp nhận đánh đổi MDE 6 điểm (n_hiệu dụng = 859, m ≥ 299 YC/người, DE = 6,96); 3 luật dừng 4 vế NẾU–TRONG–THÌ–KHÔNG THÌ; không còn dấu hỏi.

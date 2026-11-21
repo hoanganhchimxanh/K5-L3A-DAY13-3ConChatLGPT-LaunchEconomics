@@ -38,9 +38,11 @@
 - Ghi quy tắc phân biệt 4 ca hay nhầm (ca 6,9 / ca 8,15 / ca 13 / ca 12) dù hai bộ nhãn đã trùng hoàn toàn.
 - Điền bảng khắc phục 5 ca (ca 9, 7, 18, 19, 17) — mỗi ca có event có `trace_id`, ngưỡng cụ thể và một vai trò phụ trách.
 
-**Nhiệm vụ D — Pilot plan (CP4):**
-- Điền toàn bộ dấu `?` trong `pilot_plan.yaml` dựa trên kết quả D1–D2 từ Hiếu.
-- Đảm bảo ít nhất 3 luật dừng đúng mẫu NẾU–TRONG–THÌ–KHÔNG THÌ.
+**Nhiệm vụ D — Pilot plan (CP4) ✅ Hoàn tất:**
+- Điền toàn bộ dấu `?` trong `pilot_plan.yaml` dựa trên số liệu D1 từ `lab13.py` (n_hiệu dụng=859, m ≥ 299 YC/người, DE=6,96, 20 nhân viên/nhánh) và 5 câu D2 kiểm tra khả năng tách tác động.
+- Viết 3 luật dừng (an toàn, chi phí, mức độ sử dụng) đúng chuẩn 4 vế NẾU – TRONG – THÌ – KHÔNG THÌ, dựa trên tỉ lệ mở lại thực tế 3,97% của phạm vi `noi_dia` + `hang_nang`.
+- Kiểm tra tính hợp lệ cú pháp YAML bằng `yaml.safe_load` và xác nhận không còn bất kỳ dấu `?` nào ngoài phần chú thích.
+- Cập nhật mục 6 trong `ho_so_launch_v0.md` sang trạng thái "Xong, có bằng chứng".
 
 **Nhiệm vụ E — Hồ sơ launch (CP5):**
 - Hoàn thiện `chi_so.md`: 3 chỉ số (chính, dùng, an toàn), ≥ 6 event có trace_id, ≥ 2 dòng rủi ro kinh tế.
