@@ -13,12 +13,12 @@
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Hoàng Anh | 2A202603385 | hoanganh@example.com | [hoanganhchimxanh](https://github.com/hoanganhchimxanh) | Thành viên 1 — Viết code CP1–CP2 (nhiệm vụ A, B); Người gắn nhãn 1 ở CP3 |
 |   2 | Võ Huy Hoàng | 2A202603397 | vhhoang27062@gmail.com | [ferr2764](https://github.com/ferr2764) | Thành viên 3 — Người giữ hồ sơ và điều phối báo cáo |
-|   3 | Nguyễn Tuấn Hiếu | 2A202603374 | hieu@example.com | [tuanhieu1162004](https://github.com/tuanhieu1162004) | Thành viên 2 — Kiểm số A/B; Viết code CP4 (D1); Người gắn nhãn 2 ở CP3 |
+|   3 | Nguyễn Tuấn Hiếu | 2A202603374 | tuanhieu1162004@gmail.com | [tuanhieu1162004](https://github.com/tuanhieu1162004-hub) | Thành viên 2 — Kiểm số A/B, phụ trách bộ nhãn 2, viết D1 và rà luật dừng pilot |
 
 Bốn vai của lab (phân bổ cho nhóm 3 người):
 
 - **Thành viên 1 (Hoàng Anh):** Người viết code ở CP1–CP2 (A, B); Người gắn nhãn 1 độc lập ở CP3; bàn giao code sau giải lao; đóng góp dữ liệu chi phí/độ nhạy cho hồ sơ launch.
-- **Thành viên 2 (Hiếu):** Người kiểm số độc lập ở CP1–CP2; Người gắn nhãn 2 độc lập ở CP3; nhận vai viết code ở CP4 (tính D1 cỡ mẫu trong `lab13.py`).
+- **Thành viên 2 (Hiếu):** Kiểm số độc lập ở CP1–CP2, phụ trách bộ nhãn 2 ở CP3, viết mã tính cỡ mẫu D1 ở CP4 và rà luật dừng pilot ở CP5.
 - **Thành viên 3 (Hoàng):** Người giữ hồ sơ và điều phối; ghi nhận kết quả A/B/C/D; chủ trì hoàn thiện `ho_so_launch_v0.md`, `chi_so.md`, `pilot_plan.yaml` và `group_report.md`.
 
 Đổi người viết code sau giờ giải lao (Thành viên 1 bàn giao cho Thành viên 2) để ít nhất hai người trong nhóm tự tay tính và làm chủ code.
@@ -85,3 +85,23 @@ Ví dụ: `report/team/2A202603385_NguyenHoangAnh.md`.
 - [`report/team/pilot_plan.yaml`](report/team/pilot_plan.yaml) — không còn dấu `?`.
 - [`report/team/chi_so.md`](report/team/chi_so.md) — chỉ số, event, rủi ro kinh tế.
 - [`report/team/2A202603397_VoHuyHoang.md`](report/team/2A202603397_VoHuyHoang.md) — báo cáo cá nhân.
+
+## NguyenTuanHieu-2A202603374
+
+### Phần việc phụ trách
+
+- Kiểm số chi phí và độ nhạy, phụ trách bộ nhãn thứ hai, tính cỡ mẫu pilot và rà ba luật dừng.
+
+### Đóng góp cụ thể
+
+- **CP1:** Tính tay và xác nhận ba kết quả A1 là 1,20 · 1,25 · 1,25.
+- **CP2:** Đối chiếu đủ chín kịch bản B1, kiểm tra xếp hạng B2 và kiểm lại B3/B4 từ CSV. Giới hạn hai lần chạy có chi phí toàn hệ thống thấp nhất, 6.901.220 đ [simulated].
+- **CP3:** Codex gắn bộ nhãn thứ hai theo yêu cầu của Hiếu. Hai bộ trùng 20/20 ca khi đối chiếu với nhãn của Hoàng Anh. Bảng lỗi có năm biện pháp khắc phục cho năm loại lỗi.
+- **CP4:** Viết mã cho năm phép tính D1. Với 20 nhân viên mỗi nhóm, mức chênh 6 điểm phần trăm cần ít nhất 299 yêu cầu đủ điều kiện mỗi người.
+- **CP5:** Bàn giao cỡ mẫu và rà ba luật dừng về an toàn, chi phí và mức độ sử dụng. Tỷ lệ mở lại trong 7 ngày ở phạm vi pilot là 39/982 (3,97%) [simulated].
+
+### Bằng chứng
+
+- [Báo cáo cá nhân](report/team/2A202603374_NguyenTuanHieu.md)
+- [Bảng chi phí](report/team/bang_chi_phi.md) và [bảng lỗi](report/team/bang_loi.md)
+- [Mã tính D1](src/lab13.py) và [kế hoạch pilot](report/team/pilot_plan.yaml)
