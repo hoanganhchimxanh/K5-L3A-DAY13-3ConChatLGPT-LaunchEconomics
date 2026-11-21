@@ -65,7 +65,7 @@ Số tính bằng `src/lab13.py`. Mọi con số tính từ cột `_simulated` g
 
 ## B2 · Đổi một cặp và xếp hạng
 
-- Giá token gấp đôi cùng lúc tỉ lệ xem lại gấp đôi: Chi phí mỗi việc thành công là **6.543 đ [simulated] (+46,31%)**, đúng bằng tổng tác động tuyến tính của hai yếu tố (+5,62% + 40,70%).
+- Giá token gấp đôi cùng lúc tỉ lệ xem lại gấp đôi: Chi phí mỗi việc thành công là **6.543 đ [simulated] (+46,31%)**. Hai khoản tăng cộng trực tiếp trên cùng 978 việc thành công. Cộng các tỉ lệ chưa làm tròn (5,6152% và 40,6989%) rồi làm tròn cho kết quả 46,31%.
 - Xếp hạng ba yếu tố ảnh hưởng mạnh nhất: 1. **Số ca làm lại (+51,77% khi gấp đôi)** · 2. **Tỉ lệ xem lại (+40,70% khi gấp đôi)** · 3. **Lương nhân viên (+23,12% khi tăng 25%)**.
 
 ## B3 · Giới hạn chạy lại có thật sự rẻ hơn

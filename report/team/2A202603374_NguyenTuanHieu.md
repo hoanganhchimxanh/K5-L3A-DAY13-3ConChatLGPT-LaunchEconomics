@@ -17,8 +17,12 @@
 
 **B1.** Đã chạy đủ chín kịch bản và đối chiếu với bảng chi phí. Kiểm tay một kịch bản: khi giá token gấp đôi, tổng chi phí tăng thêm 245.585,13 đ, số việc thành công giữ ở 978. CPS là (4.373.585,13 + 245.585,13)/978 ≈ **4.723 đ [simulated]**, tăng **5,62%**.
 
+Kiểm tra ba cặp gấp đôi và giảm một nửa: ΔCPS giảm một nửa = −½ × ΔCPS gấp đôi vì chỉ một khoản chi đổi theo hệ số và mẫu số giữ nguyên. Kết quả làm tròn lần lượt là +5,62% / −2,81% cho token, +40,70% / −20,35% cho xem lại và +51,77% / −25,88% cho làm lại.
+
 **B2.** Khi giá token và mức xem lại cùng gấp đôi, CPS là **6.543 đ (+46,31%) [simulated]**. Xếp hạng theo mức thay đổi tuyệt đối lớn nhất của từng yếu tố cho kết quả: làm lại (+51,77%), xem lại (+40,70%) và lương nhân viên (+23,12%).
 
 **B3.** Với giới hạn hai lần chạy, có 966/1.200 việc thành công. Chi phí cả hệ thống là 4.093.220,23 + 234 × 12.000 = **6.901.220,23 đ [simulated]**, thấp hơn giới hạn một lần (7.449.780,64 đ [simulated]) và ba lần (7.037.585,13 đ [simulated]).
+
+Giới hạn một lần có CPS của trợ lý thấp nhất (4.111 đ [simulated]) nhưng thêm 85 yêu cầu phải giao cho nhân viên so với giới hạn hai lần. Chi phí xử lý 85 yêu cầu là 1.020.000 đ, lớn hơn phần chi phí trợ lý tiết kiệm được.
 
 **B4.** Trong 982 yêu cầu `noi_dia` và `hang_nang`, có 948 yêu cầu có lần chạy `ok`, 48 ca làm lại và 900 việc thành công. Tiền token và tool là 224.513,27 đ. Với 5 phút xem lại mỗi yêu cầu có lần chạy `ok`, chi phí mỗi việc thành công là (224.513,27 + 948 × 5 × 2.000 + 48 × số phút làm lại × 2.000)/900. Kết quả làm tròn là **11.743 đ [simulated]** ở 9 phút làm lại và **12.415 đ [simulated]** ở 15,3 phút. Thời gian xem lại hòa vốn lần lượt là 5,12 và 4,80 phút mỗi yêu cầu [simulated].
