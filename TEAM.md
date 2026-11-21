@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Nguyễn Hoàng Anh | 2A202603385 | hoanganh@example.com | [hoanganhchimxanh](https://github.com/hoanganhchimxanh) | Thành viên 1 — Viết code CP1–CP2 (nhiệm vụ A, B); Người gắn nhãn 1 ở CP3 |
+|   1 | Nguyễn Hoàng Anh | 2A202603385 | 26ai.anhnh5@vinuni.edu.vn | [hoanganhchimxanh](https://github.com/hoanganhchimxanh) | Thành viên 1 — Viết code CP1–CP2 (nhiệm vụ A, B); Người gắn nhãn 1 ở CP3 |
 |   2 | Võ Huy Hoàng | 2A202603397 | vhhoang27062@gmail.com | [ferr2764](https://github.com/ferr2764) | Thành viên 3 — Người giữ hồ sơ và điều phối báo cáo |
 |   3 | Nguyễn Tuấn Hiếu | 2A202603374 | hieu@example.com | [tuanhieu1162004](https://github.com/tuanhieu1162004) | Thành viên 2 — Kiểm số A/B; Viết code CP4 (D1); Người gắn nhãn 2 ở CP3 |
 
