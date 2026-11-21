@@ -203,12 +203,15 @@ if __name__ == '__main__':
 
     print(f'  {"Kịch bản":<35} {"CPS (đ)":>12} {"Thay đổi (%)":>14}')
     print(f'  {"Cơ sở (baseline)":<35} {base_cps:>12,.0f} {"0.00%":>14}')
-    b1_results = []
+    b1_by_factor = {}
     for ten, kwargs in scenarios:
         kq = mo_hinh(runs, reqs, **kwargs)
         pct = (kq['cps'] - base_cps) / base_cps * 100
         print(f'  {ten:<35} {kq["cps"]:>12,.0f} {pct:>+13.2f}%')
-        b1_results.append((ten, kq['cps'], pct))
+        # Các kịch bản của cùng một yếu tố dùng cùng tham số đầu tiên.
+        factor = next(iter(kwargs))
+        if factor not in b1_by_factor or abs(pct) > abs(b1_by_factor[factor][1]):
+            b1_by_factor[factor] = (ten, pct)
     print()
 
     # ---- B2: Đổi một cặp + xếp hạng ----
@@ -219,10 +222,10 @@ if __name__ == '__main__':
     pct_cap = (kq_cap['cps'] - base_cps) / base_cps * 100
     print(f'  Giá token gấp đôi + xem lại gấp đôi: CPS={kq_cap["cps"]:,.0f} đ ({pct_cap:+.2f}%)')
 
-    # Xếp hạng theo |pct|
-    ranking = sorted(b1_results, key=lambda x: abs(x[2]), reverse=True)
+    # Xếp hạng từng yếu tố theo kịch bản có thay đổi tuyệt đối lớn nhất.
+    ranking = sorted(b1_by_factor.values(), key=lambda result: abs(result[1]), reverse=True)
     print(f'  Xếp hạng ba yếu tố ảnh hưởng mạnh nhất:')
-    for i, (ten, cps, pct) in enumerate(ranking[:3], 1):
+    for i, (ten, pct) in enumerate(ranking[:3], 1):
         print(f'    {i}. {ten}: {pct:+.2f}%')
     print()
 
