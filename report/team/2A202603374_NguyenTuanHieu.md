@@ -7,13 +7,19 @@
 - Email: tuanhieu1162004@gmail.com
 - Vai trò: Người kiểm số CP1–CP2, người gắn nhãn 2 ở CP3 và người viết code D1 ở CP4.
 
-## 2. CP1 — Kiểm số A1
+## 2. Phần việc phụ trách
+
+- Tính tay A1 và đối chiếu B3/B4 từ hai CSV nguồn.
+- Chuẩn bị bộ nhãn thứ hai cho 20 ca CP3.
+- Tính cỡ mẫu pilot và cung cấp số liệu nền để nhóm rà luật dừng.
+
+## 3. Kết quả đối chiếu
 
 **A1.** Với xác suất đúng 0,8 và tối đa hai lần chạy, mọi yêu cầu đều chạy lần đầu và chỉ 20% cần lần hai. Kỳ vọng là 1 + 0,2 = **1,20**. Chạy đến khi đúng cho kỳ vọng 1/0,8 = **1,25**. Với tối đa ba lần, kỳ vọng 1 + 0,2 + 0,04 = 1,24, xác suất thành công 1 − 0,2³ = 0,992, nên hệ số chi phí là 1,24/0,992 = **1,25**.
 
-Đã chạy lại ba phép thử trong lab13.py và cả ba đều đạt.
+Đã chạy lại ba phép thử trong `lab13.py` và cả ba đều đạt.
 
-## 3. CP2 — Kiểm số độ nhạy
+### CP2 — Kiểm số độ nhạy
 
 **B1.** Đã chạy đủ chín kịch bản và đối chiếu với bảng chi phí. Kiểm tay một kịch bản: khi giá token gấp đôi, tổng chi phí tăng thêm 245.585,13 đ, số việc thành công giữ ở 978. CPS là (4.373.585,13 + 245.585,13)/978 ≈ **4.723 đ [simulated]**, tăng **5,62%**.
 
@@ -27,11 +33,11 @@ Giới hạn một lần có CPS của trợ lý thấp nhất (4.111 đ [simula
 
 **B4.** Trong 982 yêu cầu `noi_dia` và `hang_nang`, có 948 yêu cầu có lần chạy `ok`, 48 ca làm lại và 900 việc thành công. Tiền token và tool là 224.513,27 đ. Với 5 phút xem lại mỗi yêu cầu có lần chạy `ok`, chi phí mỗi việc thành công là (224.513,27 + 948 × 5 × 2.000 + 48 × số phút làm lại × 2.000)/900. Kết quả làm tròn là **11.743 đ [simulated]** ở 9 phút làm lại và **12.415 đ [simulated]** ở 15,3 phút. Thời gian xem lại hòa vốn lần lượt là 5,12 và 4,80 phút mỗi yêu cầu [simulated].
 
-## 4. CP3 — Gắn nhãn và đối chiếu
+### CP3 — Gắn nhãn và đối chiếu
 
 Codex gắn 20 nhãn từ đề bài theo yêu cầu của Hiếu. Phân bố gồm 4 lỗi do người dùng, 5 lỗi hệ thống, 4 lỗi ngữ cảnh, 4 lỗi giới hạn hệ thống và 3 lỗi ngầm. Hai bộ nhãn trùng **20/20 (100%)**. Bảng lỗi ghi rõ người thực hiện và có năm cách khắc phục với tín hiệu phát hiện đo được. Bài lab yêu cầu Hiếu tự gắn nhãn trong 8 phút trước khi đối chiếu để xác nhận đồng thuận giữa hai thành viên.
 
-## 5. CP4 — Tính cỡ mẫu pilot
+### CP4 — Tính cỡ mẫu pilot
 
 **D1.** Với baseline 0,70, alpha 0,05, power 0,80 và ICC 0,02:
 
@@ -47,7 +53,7 @@ Kiểm tra mốc tối thiểu ở câu e: 298 yêu cầu/người cho 858,79 y�
 
 **Rà luật dừng.** Dữ liệu giả lập có 51/1.200 yêu cầu mở lại trong 7 ngày (4,25%), riêng `noi_dia` và `hang_nang` là 39/982 (3,97%). Đánh giá ngưỡng an toàn trên đúng phạm vi pilot và dùng các yêu cầu đã đủ 7 ngày theo dõi.
 
-## 6. CP5 — Bàn giao số liệu và rà luật dừng pilot
+### CP5 — Bàn giao số liệu và rà luật dừng pilot
 
 **Cỡ mẫu bàn giao.** Phương án chia ngẫu nhiên theo nhân viên 20 + 20 cần ít nhất 299 yêu cầu đủ điều kiện mỗi người, tương đương 5.980 yêu cầu thực và 859,20 yêu cầu hiệu dụng mỗi nhóm cho mức chênh 6 điểm phần trăm. Với 20 người mỗi nhóm, cỡ mẫu hiệu dụng luôn dưới 1.000, trong khi mức chênh 5 điểm cần 1.251. Trước khi chốt ngày quyết định, nhóm cần xác nhận khối lượng theo từng nhân viên và dự trù đủ 7 ngày theo dõi sau khi nhận yêu cầu cuối.
 
@@ -62,3 +68,18 @@ Kiểm tra mốc tối thiểu ở câu e: 298 yêu cầu/người cho 858,79 y�
 Đề nghị xử lý ca hoàn tiền trùng ngay khi xác nhận và chốt thời hạn phản ứng trong kế hoạch. Rà ba chỉ số trên để quyết định dừng hoặc giữ rollout. Chỉ đánh giá hiệu quả của chỉ số chính tại mốc quyết định đã chốt.
 
 Bản kế hoạch đã chốt dùng các ngưỡng 6% hoặc +2 điểm phần trăm, 8.000 đ và 40%. Các diễn giải trên đề xuất cách áp dụng khi có đủ 7 ngày theo dõi, cách giữ rollout và cách xử lý hoàn trùng. Hoàng cần xác nhận các điểm này trước khi chạy.
+
+## 4. Bằng chứng
+
+- [Mã tính cỡ mẫu D1](../../src/lab13.py)
+- [Bảng chi phí và độ nhạy](bang_chi_phi.md)
+- [Bảng nhãn CP3](bang_loi.md)
+- [Số liệu bàn giao cho kế hoạch pilot](pilot_plan.yaml)
+
+## 5. Công cụ AI đã dùng
+
+Codex hỗ trợ triển khai D1, đối chiếu A/B bằng Python và thực hiện bộ nhãn thứ hai ở CP3. Các phép tính B3/B4 được kiểm tra trực tiếp từ CSV bằng thư viện chuẩn Python.
+
+## 6. Tự đánh giá
+
+B3/B4 khớp số làm tròn trong bảng chi phí. D1 chỉ ra giới hạn của cách chia theo cụm và số yêu cầu tối thiểu ở mức chênh 6 điểm phần trăm. Kết quả CP3 là đối chiếu giữa bộ của Hoàng Anh và bộ do Codex gắn theo yêu cầu của Hiếu. Bài lab yêu cầu thao tác gắn nhãn độc lập giữa hai thành viên.
