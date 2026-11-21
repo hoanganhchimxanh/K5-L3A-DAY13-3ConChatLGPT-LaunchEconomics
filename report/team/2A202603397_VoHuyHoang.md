@@ -44,10 +44,10 @@
 - Kiểm tra tính hợp lệ cú pháp YAML bằng `yaml.safe_load` và xác nhận không còn bất kỳ dấu `?` nào ngoài phần chú thích.
 - Cập nhật mục 6 trong `ho_so_launch_v0.md` sang trạng thái "Xong, có bằng chứng".
 
-**Nhiệm vụ E — Hồ sơ launch (CP5):**
-- Hoàn thiện `chi_so.md`: 3 chỉ số (chính, dùng, an toàn), ≥ 6 event có trace_id, ≥ 2 dòng rủi ro kinh tế.
-- Hoàn thiện `ho_so_launch_v0.md`: đủ 7 mục, dòng đề xuất cuối.
-- Tổng hợp `group_report.md` và điều phối commit + push trước 23:59.
+**Nhiệm vụ E — Hồ sơ launch (CP5) ✅ Hoàn tất:**
+- Hoàn thiện `chi_so.md`: tính thử 3 chỉ số từ 1.200 YC (Chính 82,83%, Dùng 27,12%, An toàn 4,25%), đề xuất thêm 2 chỉ số mới; đặc tả 10 event telemetry chuẩn hóa mang `trace_id`; tổng hợp 3 rủi ro kinh tế trọng yếu có hành động và người phụ trách rõ ràng.
+- Hoàn thiện `ho_so_launch_v0.md`: đủ 7 mục theo chuẩn 1 trang, trạng thái phân định rạch ròi giữa "Giả lập" và "Xong, có bằng chứng", người phụ trách là từng vai trò cụ thể; đưa ra đề xuất **Go có điều kiện** kèm 4 điều kiện ràng buộc có hạn kiểm tra và người chịu trách nhiệm.
+- Tổng hợp hoàn chỉnh báo cáo nhóm `group_report.md` (2 trang) phản ánh toàn diện kết quả từ A đến E và giải pháp xử lý khó khăn về cỡ mẫu thực nghiệm.
 
 ## 4. Bằng chứng
 
