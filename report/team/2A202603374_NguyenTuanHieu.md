@@ -26,3 +26,7 @@ Kiểm tra ba cặp gấp đôi và giảm một nửa: ΔCPS giảm một nửa
 Giới hạn một lần có CPS của trợ lý thấp nhất (4.111 đ [simulated]) nhưng thêm 85 yêu cầu phải giao cho nhân viên so với giới hạn hai lần. Chi phí xử lý 85 yêu cầu là 1.020.000 đ, lớn hơn phần chi phí trợ lý tiết kiệm được.
 
 **B4.** Trong 982 yêu cầu `noi_dia` và `hang_nang`, có 948 yêu cầu có lần chạy `ok`, 48 ca làm lại và 900 việc thành công. Tiền token và tool là 224.513,27 đ. Với 5 phút xem lại mỗi yêu cầu có lần chạy `ok`, chi phí mỗi việc thành công là (224.513,27 + 948 × 5 × 2.000 + 48 × số phút làm lại × 2.000)/900. Kết quả làm tròn là **11.743 đ [simulated]** ở 9 phút làm lại và **12.415 đ [simulated]** ở 15,3 phút. Thời gian xem lại hòa vốn lần lượt là 5,12 và 4,80 phút mỗi yêu cầu [simulated].
+
+## 4. CP3 — Gắn nhãn và đối chiếu
+
+Codex gắn 20 nhãn từ đề bài theo yêu cầu của Hiếu. Phân bố gồm 4 lỗi do người dùng, 5 lỗi hệ thống, 4 lỗi ngữ cảnh, 4 lỗi giới hạn hệ thống và 3 lỗi ngầm. Hai bộ nhãn trùng **20/20 (100%)**. Bảng lỗi ghi rõ người thực hiện và có năm cách khắc phục với tín hiệu phát hiện đo được. Bài lab yêu cầu Hiếu tự gắn nhãn trong 8 phút trước khi đối chiếu để xác nhận đồng thuận giữa hai thành viên.
