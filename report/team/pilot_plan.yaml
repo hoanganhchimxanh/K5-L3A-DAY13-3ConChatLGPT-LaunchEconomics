@@ -3,11 +3,11 @@
 # Kiểm tra đọc được: python -c "import yaml; yaml.safe_load(open('../report/team/pilot_plan.yaml'))"
 #
 # D1 · Cỡ mẫu (baseline 0,70; mục tiêu +5 điểm; alpha 0,05; power 0,8; ICC 0,02)
-#   a) Chia theo yêu cầu:
-#   b) Theo nhân viên, m = 75:
-#   c) 20 nhân viên mỗi nhóm:
-#   d) 6 depot mỗi nhóm:
-#   e) Mức chênh 6 điểm (859 mỗi nhóm), 20 nhân viên mỗi nhóm:
+#   a) Chia theo yêu cầu: 1.251 yêu cầu mỗi nhóm.
+#   b) Theo nhân viên, m = 75: DE = 2,48; cần 3.103 yêu cầu mỗi nhóm, tức 42 người mỗi nhóm. Có 40 người, cần 84.
+#   c) 20 nhân viên mỗi nhóm: cỡ mẫu hiệu dụng luôn dưới 1.000, thiếu mẫu cho mức chênh 5 điểm.
+#   d) 6 depot mỗi nhóm: cỡ mẫu hiệu dụng luôn dưới 300.
+#   e) Mức chênh 6 điểm: cần ít nhất 299 yêu cầu mỗi người, DE = 6,96, 5.980 yêu cầu thực mỗi nhóm (859,20 hiệu dụng).
 #
 # D2 · Năm câu kiểm tra "tách được tác động" với cách chia đã chọn (mỗi câu một dòng):
 #   1. Đối chứng chạy cùng thời gian:
@@ -16,9 +16,13 @@
 #   4. Chỉ số chính, ngưỡng, ngày quyết định đã viết trước:
 #   5. Ít nhất 20 cụm mỗi nhóm:
 #
-# Đánh đổi đã chấp nhận (nếu cách chia chưa đạt cả hai điều kiện):
+# Đánh đổi để nhóm quyết định: chia theo nhân viên 20 + 20 giúp hạn chế việc
+# cùng một nhân viên xử lý cả hai nhánh. Phương án này chỉ đủ power cho +6 điểm
+# nếu mỗi người đạt ít nhất 299 yêu cầu đủ điều kiện và đã theo dõi trọn 7 ngày.
+# Xác nhận khối lượng theo nhân viên trong phạm vi pilot trước khi chốt ngày quyết định.
 #
-# Tỉ lệ mo_lai_trong_7_ngay hiện tại và ngưỡng an toàn đã chọn:
+# Tỉ lệ mo_lai_trong_7_ngay trong dữ liệu giả lập: 51/1.200 = 4,25% toàn bộ; 39/982 = 3,97% cho noi_dia + hang_nang.
+# Khi rà luật dừng, dùng tỉ lệ của đúng phạm vi pilot và chỉ đếm yêu cầu đã đủ cửa sổ theo dõi 7 ngày.
 
 pilot:
   owner: "?"                      # một người có tên vai trò, không ghi "cả đội"

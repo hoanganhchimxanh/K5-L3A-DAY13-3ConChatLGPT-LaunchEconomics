@@ -30,3 +30,19 @@ Giới hạn một lần có CPS của trợ lý thấp nhất (4.111 đ [simula
 ## 4. CP3 — Gắn nhãn và đối chiếu
 
 Codex gắn 20 nhãn từ đề bài theo yêu cầu của Hiếu. Phân bố gồm 4 lỗi do người dùng, 5 lỗi hệ thống, 4 lỗi ngữ cảnh, 4 lỗi giới hạn hệ thống và 3 lỗi ngầm. Hai bộ nhãn trùng **20/20 (100%)**. Bảng lỗi ghi rõ người thực hiện và có năm cách khắc phục với tín hiệu phát hiện đo được. Bài lab yêu cầu Hiếu tự gắn nhãn trong 8 phút trước khi đối chiếu để xác nhận đồng thuận giữa hai thành viên.
+
+## 5. CP4 — Tính cỡ mẫu pilot
+
+**D1.** Với baseline 0,70, alpha 0,05, power 0,80 và ICC 0,02:
+
+| Câu | Kết quả |
+| --- | --- |
+| a | Chia theo yêu cầu cần 1.251 yêu cầu/nhóm để phát hiện +5 điểm phần trăm. |
+| b | Chia theo nhân viên, 75 yêu cầu/người cho DE = 2,48. Cần 3.103 yêu cầu và 42 người/nhóm, tổng 84 người. |
+| c | Với 20 người/nhóm, cỡ mẫu hiệu dụng luôn dưới 1.000. |
+| d | Với 6 depot/nhóm, cỡ mẫu hiệu dụng luôn dưới 300. |
+| e | Ở mức +6 điểm phần trăm, giải 20m/(0,98 + 0,02m) ≥ 859 cho m ≥ 299 sau khi làm tròn lên. Tương ứng 5.980 yêu cầu thực và 859,20 yêu cầu hiệu dụng mỗi nhóm. |
+
+Kiểm tra mốc tối thiểu ở câu e: 298 yêu cầu/người cho 858,79 yêu cầu hiệu dụng mỗi nhóm, còn 299 yêu cầu/người cho 859,20. Đã chạy `lab13.py` từ `src/` và đối chiếu đủ năm dòng D1.
+
+**Rà luật dừng.** Dữ liệu giả lập có 51/1.200 yêu cầu mở lại trong 7 ngày (4,25%), riêng `noi_dia` và `hang_nang` là 39/982 (3,97%). Đánh giá ngưỡng an toàn trên đúng phạm vi pilot và dùng các yêu cầu đã đủ 7 ngày theo dõi.

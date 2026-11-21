@@ -1,9 +1,11 @@
 """Lab 13 · Định giá agent và lập kế hoạch pilot (Gate 2a) — bài làm của nhóm (file nộp).
-Chạy trong thư mục src/: python3 lab13.py   (cần pandas; Nhiệm vụ D cần thêm statsmodels)
+Chạy trong thư mục src/: python3 lab13.py   (cần pandas)
 Không cần khoá API. Điền các chỗ ghi VIẾT Ở ĐÂY (đánh dấu TODO CP1…CP4). Dữ liệu trong hai file CSV là giả lập.
 Bản gốc chưa sửa nằm ở lab13_starter.py.
 """
 import math
+from statistics import NormalDist
+
 import pandas as pd
 
 # Bảng giá GIẢ ĐỊNH của lab (không phải giá thật của nhà cung cấp nào)
@@ -103,6 +105,52 @@ def mo_hinh_theo_loai(runs, reqs, loai, **kwargs):
     r_loai = runs[runs['request_id'].isin(req_ids)]
     q_loai = reqs[reqs['loai'] == loai].copy()
     return mo_hinh(r_loai, q_loai, **kwargs)
+
+
+def co_mau_hai_ti_le(p1, p2, alpha=0.05, power=0.8):
+    """Cỡ mẫu mỗi nhóm khi so sánh hai tỉ lệ, hai phía, chia đều hai nhóm."""
+    normal = NormalDist()
+    z_alpha = normal.inv_cdf(1 - alpha / 2)
+    z_power = normal.inv_cdf(power)
+    p_trung_binh = (p1 + p2) / 2
+    sai_so_0 = math.sqrt(2 * p_trung_binh * (1 - p_trung_binh))
+    sai_so_1 = math.sqrt(p1 * (1 - p1) + p2 * (1 - p2))
+    return math.ceil(((z_alpha * sai_so_0 + z_power * sai_so_1) / (p2 - p1)) ** 2)
+
+
+def in_co_mau_pilot():
+    """D1 · So sánh ba cách chia trên các giả định của đề bài."""
+    icc = 0.02
+    so_nhan_vien = 40
+    nguoi_moi_nhom = so_nhan_vien // 2
+    depot_moi_nhom = 6
+    yc_moi_nguoi = 75
+
+    n_5_diem = co_mau_hai_ti_le(0.70, 0.75)
+    de_75 = 1 + (yc_moi_nguoi - 1) * icc
+    n_theo_nhan_vien = math.ceil(n_5_diem * de_75)
+    nguoi_can_moi_nhom = math.ceil(n_theo_nhan_vien / yc_moi_nguoi)
+    tran_nhan_vien = nguoi_moi_nhom / icc
+    tran_depot = depot_moi_nhom / icc
+
+    # Câu e cho trước mục tiêu 859 yêu cầu hiệu dụng mỗi nhóm.
+    n_6_diem = 859
+    m = math.ceil(n_6_diem * (1 - icc) / (nguoi_moi_nhom - n_6_diem * icc))
+    de_6_diem = 1 + (m - 1) * icc
+    n_thuc = nguoi_moi_nhom * m
+
+    print('=' * 55)
+    print('D1 · Cỡ mẫu pilot (alpha=0.05, power=0.80, ICC=0.02)')
+    print('=' * 55)
+    print(f'  a) Theo yêu cầu, +5 điểm: {n_5_diem:,} yêu cầu/nhóm.')
+    print(f'  b) Theo nhân viên, m={yc_moi_nguoi}: DE={de_75:.2f}, '
+          f'{n_theo_nhan_vien:,} yêu cầu/nhóm, {nguoi_can_moi_nhom} người/nhóm. '
+          f'Cần {2 * nguoi_can_moi_nhom} người, hiện có {so_nhan_vien}.')
+    print(f'  c) {nguoi_moi_nhom} người/nhóm: n hiệu dụng luôn dưới '
+          f'{tran_nhan_vien:,.0f}, thiếu mẫu cho +5 điểm.')
+    print(f'  d) {depot_moi_nhom} depot/nhóm: n hiệu dụng luôn dưới {tran_depot:,.0f}.')
+    print(f'  e) +6 điểm: cần ít nhất {m} yêu cầu/người, DE={de_6_diem:.2f}, '
+          f'{n_thuc:,} yêu cầu thực/nhóm, {n_thuc / de_6_diem:.2f} hiệu dụng/nhóm.')
 
 
 if __name__ == '__main__':
@@ -282,6 +330,4 @@ if __name__ == '__main__':
     print(f'  Với 15.3 phút làm lại/ca: CPS = {cps_15m3:,.0f} đ ({cps_15m3/BASELINE:.2f}x so với {BASELINE:,} đ)')
     print()
 
-    # TODO CP4 · Nhiệm vụ D: cỡ mẫu.
-    #   from statsmodels.stats.proportion import proportion_effectsize
-    #   from statsmodels.stats.power import NormalIndPower
+    in_co_mau_pilot()
