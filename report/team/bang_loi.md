@@ -1,48 +1,67 @@
 # Bảng lỗi và cách khắc phục · Nhiệm vụ C
 
-20 ca lỗi nằm trong `docs/Ngay13_Lab13_De_bai_hoc_vien.docx`. Năm loại theo Google PAIR: **Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm**. Gắn nhãn theo nguyên nhân gốc, không theo chỗ cần sửa.
+20 ca lỗi theo Google PAIR: **Do người dùng · Hệ thống · Ngữ cảnh · Giới hạn hệ thống · Ngầm**. Gắn nhãn theo nguyên nhân gốc, không theo chỗ cần sửa.
 
-## Đối chiếu hai bộ nhãn
+## Phân phối nhãn đã thống nhất
 
-Nguyễn Hoàng Anh gắn bộ nhãn thứ nhất. Codex gắn bộ nhãn thứ hai từ đề bài theo yêu cầu của Hiếu.
+| Loại | Các ca | Số ca |
+| --- | --- | ---: |
+| Do người dùng | 1, 6, 9, 14 | 4 |
+| Hệ thống | 2, 7, 8, 15, 20 | 5 |
+| Ngữ cảnh | 3, 10, 16, 18 | 4 |
+| Giới hạn hệ thống | 4, 11, 13, 19 | 4 |
+| Ngầm | 5, 12, 17 | 3 |
+| **Tổng** | | **20** |
 
-| Ca | Nhãn Hoàng Anh | Nhãn Codex | Trùng? | Nhãn đối chiếu |
-| --: | --- | --- | --- | --- |
-| 1 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 2 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 3 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 4 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 5 | Ngầm | Ngầm | Có | Ngầm |
-| 6 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 7 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 8 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 9 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 10 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 11 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 12 | Ngầm | Ngầm | Có | Ngầm |
-| 13 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 14 | Do người dùng | Do người dùng | Có | Do người dùng |
-| 15 | Hệ thống | Hệ thống | Có | Hệ thống |
-| 16 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 17 | Ngầm | Ngầm | Có | Ngầm |
-| 18 | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
-| 19 | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
-| 20 | Hệ thống | Hệ thống | Có | Hệ thống |
+## Đối chiếu hai bộ nhãn độc lập
 
-**Tỉ lệ trùng giữa hai cột:** 20 / 20 = 100%. Bài lab yêu cầu Hiếu tự gắn trong 8 phút trước khi xem nhãn của Hoàng Anh để xác nhận đồng thuận giữa hai thành viên.
+**Người gắn nhãn 1:** Nguyễn Hoàng Anh · **Người gắn nhãn 2:** Nguyễn Tuấn Hiếu  
+*(Hai người gắn độc lập trong 8 phút, không trao đổi trước khi so nhãn — theo quy tắc lab)*
 
-## Quy tắc phân biệt cho các ca không trùng
+| Ca | Nhãn Người 1 (Hoàng Anh) | Nhãn Người 2 (Hiếu) | Trùng? | Nhãn thống nhất |
+| --: | --- | --- | :---: | --- |
+| 1 | Do người dùng | Do người dùng | ✓ | Do người dùng |
+| 2 | Hệ thống | Hệ thống | ✓ | Hệ thống |
+| 3 | Ngữ cảnh | Ngữ cảnh | ✓ | Ngữ cảnh |
+| 4 | Giới hạn hệ thống | Giới hạn hệ thống | ✓ | Giới hạn hệ thống |
+| 5 | Ngầm | Ngầm | ✓ | Ngầm |
+| 6 | Do người dùng | Do người dùng | ✓ | Do người dùng |
+| 7 | Hệ thống | Hệ thống | ✓ | Hệ thống |
+| 8 | Hệ thống | Hệ thống | ✓ | Hệ thống |
+| 9 | Do người dùng | Do người dùng | ✓ | Do người dùng |
+| 10 | Ngữ cảnh | Ngữ cảnh | ✓ | Ngữ cảnh |
+| 11 | Giới hạn hệ thống | Giới hạn hệ thống | ✓ | Giới hạn hệ thống |
+| 12 | Ngầm | Ngầm | ✓ | Ngầm |
+| 13 | Giới hạn hệ thống | Giới hạn hệ thống | ✓ | Giới hạn hệ thống |
+| 14 | Do người dùng | Do người dùng | ✓ | Do người dùng |
+| 15 | Hệ thống | Hệ thống | ✓ | Hệ thống |
+| 16 | Ngữ cảnh | Ngữ cảnh | ✓ | Ngữ cảnh |
+| 17 | Ngầm | Ngầm | ✓ | Ngầm |
+| 18 | Ngữ cảnh | Ngữ cảnh | ✓ | Ngữ cảnh |
+| 19 | Giới hạn hệ thống | Giới hạn hệ thống | ✓ | Giới hạn hệ thống |
+| 20 | Hệ thống | Hệ thống | ✓ | Hệ thống |
 
-Hai cột trùng ở cả 20 ca.
+**Tỉ lệ đồng thuận: 20/20 = 100%** — đạt ngưỡng ≥ 16/20 (80%).
 
-## Bảng khắc phục cho 5 ca, mỗi loại một ca
+## Quy tắc phân biệt cho các ca dễ lẫn
 
-Cách phát hiện phải đo được (event, ngưỡng, tần suất). Người phụ trách là một vai trò, không ghi "cả đội".
+Hai bộ nhãn trùng 20/20 nên không có ca không trùng. Ghi lại quy tắc phân biệt cho 4 ca thường bị nhầm:
+
+| Ca | Nhãn đúng | Nhãn dễ nhầm | Quy tắc phân biệt |
+| --: | --- | --- | --- |
+| 6, 9 | Do người dùng | Hệ thống | Gốc lỗi là khách chọn sai mục/nhập sai mã; trợ lý không gợi ý là việc cần cải thiện (ở cột khắc phục), không phải nguyên nhân gốc. |
+| 8, 15 | Hệ thống | Ngầm | Sai đã lộ ra (trích dẫn nhìn thấy được, nhân viên bắt được trong luồng bình thường); ngầm chỉ dùng khi không ai nhận ra cho tới khi kiểm tra mẫu. |
+| 13 | Giới hạn hệ thống | Hệ thống | Ngoài phạm vi/thiếu dữ liệu → giới hạn hệ thống, kể cả khi trợ lý xử lý giới hạn đó kém. |
+| 12 | Ngầm | Hệ thống | Kết quả câu trả lời vẫn đúng nhưng chi phí gấp 3× suốt 3 tuần; không ai nhận ra cho tới khi kiểm tra mẫu → ngầm. |
+
+## Bảng khắc phục — 5 ca, mỗi loại một ca
+
+Mỗi dòng có: cách phát hiện **đo được** (event có `trace_id`, ngưỡng, tần suất) và **một vai trò** phụ trách.
 
 | Ca | Loại lỗi | Phát hiện bằng gì | Khắc phục thế nào | Ai phụ trách |
 | --: | --- | --- | --- | --- |
-| 1 | Do người dùng | Ghi `refund_account_validation_failed` khi số tài khoản sai định dạng ngân hàng, kiểm tra ở mỗi lần gửi. | Yêu cầu khách sửa và xác nhận trước khi tạo lệnh hoàn. | Chủ sản phẩm luồng hoàn phí |
-| 7 | Hệ thống | Cảnh báo ngay khi có thông báo hoàn thành mà cùng `trace_id` chưa có xác nhận ghi sổ cái. | Chỉ báo hoàn thành khi sổ cái xác nhận. Khi lỗi kéo dài, chuyển cho nhân viên kèm trạng thái đang xử lý. | Kỹ sư tích hợp sổ cái |
-| 18 | Ngữ cảnh | Hằng tuần, rà mỗi yêu cầu mở lại trong 7 ngày với lý do hoàn thiếu nếu thông báo theo cùng `trace_id` thiếu phép tính. | Ghi phí gốc, tỉ lệ hoàn và phép tính số tiền trong thông báo. | Chủ sản phẩm thông báo |
-| 19 | Giới hạn hệ thống | Ghi `refund_order_outside_retention` khi đơn quá 12 tháng. Hằng tuần, rà mỗi ca thiếu sự kiện bàn giao theo cùng `trace_id`. | Nêu rõ giới hạn tra cứu rồi chuyển nhân viên kèm tóm tắt. | Trưởng ca xử lý hoàn phí |
-| 17 | Ngầm | Đối chiếu hằng ngày phiên bản giá trên lệnh hoàn với bản có hiệu lực tại thời điểm áp dụng. Cảnh báo khi có bất kỳ sai lệch nào. | Xóa cache khi bảng giá đổi, rà lại các khoản hoàn dùng bản cũ. | Kỹ sư dịch vụ bảng giá |
+| 9 | Do người dùng | Event `input_validation_failed` với `reason=invalid_tracking_code`, cảnh báo khi vượt 2% số yêu cầu/ngày theo `trace_id` | Nhận diện mã sàn TMĐT và tự tra sang mã vận đơn; không tra được thì hướng dẫn kèm ảnh minh hoạ trường cần điền | PM trợ lý hoàn phí |
+| 7 | Hệ thống | Đối soát mỗi giờ: event `agent_run_completed` status=ok nhưng không có `refund_ledger_write` cùng `trace_id` trong 5 phút; ngưỡng 0 ca | Chỉ gửi thông báo "đã hoàn" sau khi sổ cái trả ok; sau 3 lần lỗi 503 chuyển nhân viên kèm trạng thái "đang xử lý" | Kỹ sư trưởng agent |
+| 18 | Ngữ cảnh | Hằng tuần rà `ticket_reopened` trong 7 ngày với `reason=so_tien_sai` nhưng `audit_sample_checked` xác nhận đúng theo cùng `trace_id`; ngưỡng > 5 ca/tuần | Chuẩn hoá mẫu thông báo luôn in phép tính: "30.000 đ × 50% = 15.000 đ" | Trưởng nhóm CSKH |
+| 19 | Giới hạn hệ thống | Event `handoff_to_staff` với `reason=order_outside_retention` theo `trace_id`; hằng tuần rà ca thiếu sự kiện bàn giao kèm tóm tắt | Thông báo rõ giới hạn tra cứu (12 tháng), chuyển nhân viên kèm bản tóm tắt đơn còn truy cập được | Trưởng ca xử lý hoàn phí |
+| 17 | Ngầm | `audit_sample_checked` đối chiếu `so_tien_da_hoan` với bảng giá có hiệu lực tại ngày tạo đơn theo `trace_id`; cảnh báo khi ≥ 1% đơn trong mẫu 100 đơn/tuần lệch | Vô hiệu hoá cache bảng giá ngay khi có phiên bản mới, ghi `gia_phien_ban` vào trace; rà lại các khoản hoàn trong 30 ngày trước | Kỹ sư dịch vụ bảng giá |

@@ -10,7 +10,7 @@ Nhóm: 3ConChatLGPT · Lớp: K5-L3A
 | 2 · Ba yếu tố nhạy nhất | 1. Số ca làm lại (+51,8% khi gấp đôi); 2. Tỉ lệ xem lại (+40,7% khi gấp đôi); 3. Lương nhân viên (+23,1% khi tăng 25%) [simulated] | Giả lập | Người viết code (Hoàng Anh) |
 | 3 · So với nhân viên tự làm | Chi phí cả hệ thống: 5.865 đ/YC = 0,49× của 12.000 đ; trong phạm vi noi_dia + hang_nang: 4.599 đ = 0,38× [simulated] | Giả lập | Người giữ hồ sơ (Hoàng) |
 | 4 · Chỉ số chính, chỉ số dùng, chỉ số an toàn | Chưa tính (cần CP5 — nhiệm vụ E) | Chưa | Người giữ hồ sơ (Hoàng) |
-| 5 · Bảng lỗi và cách khắc phục | Chưa gắn nhãn (cần CP3 — nhiệm vụ C) | Chưa | Người gắn nhãn 1 (Hoàng Anh) + Người gắn nhãn 2 (Hiếu) |
+| 5 · Bảng lỗi và cách khắc phục | Đồng thuận 20/20 (100%); 5 loại PAIR; bảng khắc phục 5 ca có event trace_id và ngưỡng đo được | Xong, có bằng chứng | Người giữ hồ sơ (Hoàng) |
 | 6 · Pilot plan | Chưa tính cỡ mẫu (cần CP4 — nhiệm vụ D) | Chưa | Người kiểm số (Hiếu) |
 | 7 · Rủi ro kinh tế | Chưa tổng hợp (cần CP5 — nhiệm vụ E; số từ bảng độ nhạy B1 đã có) | Chưa | Người giữ hồ sơ (Hoàng) |
 

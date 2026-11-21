@@ -32,10 +32,11 @@
 - Ghi B4: xem lại 100% (noi_dia + hang_nang) → CPS 11.743 đ (0,98×) với 9 phút làm lại/ca; lên 12.415 đ (1,03×) theo thực tế 15,3 phút — triệt tiêu lợi thế so với 12.000 đ; mức hòa vốn ≤ 4,8–5,1 phút/ca xem lại [simulated].
 - Cập nhật `ho_so_launch_v0.md` ghi chú CP2 hoàn tất.
 
-**Nhiệm vụ C — Bảng lỗi (CP3):**
-- Tổng hợp hai bộ nhãn độc lập (Hoàng Anh và Hiếu) vào `bang_loi.md`.
-- Tính tỉ lệ đồng thuận và ghi quy tắc phân biệt cho các ca không trùng.
-- Điền bảng khắc phục 5 ca (một ca mỗi loại theo Google PAIR): cách phát hiện đo được và một vai trò phụ trách.
+**Nhiệm vụ C — Bảng lỗi (CP3) ✅ Hoàn tất:**
+- Tổng hợp hai bộ nhãn độc lập (Hoàng Anh và Hiếu) vào `bang_loi.md`; tỉ lệ đồng thuận **20/20 = 100%** — đạt ngưỡng ≥ 16/20.
+- Ghi bảng phân phối nhãn đủ 5 loại Google PAIR: Do người dùng (ca 1,6,9,14) · Hệ thống (ca 2,7,8,15,20) · Ngữ cảnh (ca 3,10,16,18) · Giới hạn hệ thống (ca 4,11,13,19) · Ngầm (ca 5,12,17).
+- Ghi quy tắc phân biệt 4 ca hay nhầm (ca 6,9 / ca 8,15 / ca 13 / ca 12) dù hai bộ nhãn đã trùng hoàn toàn.
+- Điền bảng khắc phục 5 ca (ca 9, 7, 18, 19, 17) — mỗi ca có event có `trace_id`, ngưỡng cụ thể và một vai trò phụ trách.
 
 **Nhiệm vụ D — Pilot plan (CP4):**
 - Điền toàn bộ dấu `?` trong `pilot_plan.yaml` dựa trên kết quả D1–D2 từ Hiếu.
